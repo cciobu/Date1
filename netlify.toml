@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  # increase default timeout if needed
+  node_bundler = "esbuild"

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitație</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main id="app">
+    <section class="step active" data-step="1" id="step-1">
+      <div class="card center">
+        <h1 class="title">Vrei să ieșim undeva împreună? <span class="heart">😁</span></h1>
+        <div class="buttons">
+          <button id="yesBtn" class="btn primary">DA</button>
+          <button id="noBtn" class="btn ghost">NU</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-step="2" id="step-2">
+      <div class="card">
+        <h2>Selectează data și ora</h2>
+        <div class="datetime">
+          <input type="date" id="dateInput" />
+          <input type="time" id="timeInput" />
+        </div>
+        <div class="actions">
+          <button id="dateContinue" class="btn primary disabled" disabled>Continuă</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-step="3" id="step-3">
+      <div class="card">
+        <h2>Selectează activitatea</h2>
+        <div class="options grid" id="activityOptions">
+          <button class="option">În predicare, apoi la cafea ☕</button>
+          <button class="option">O înghețată 🍦</button>
+          <button class="option">O plimbare într-un parc 🌿</button>
+          <button class="option">Să mâncăm ceva 🍽️</button>
+        </div>
+        <div class="actions">
+          <button id="activityContinue" class="btn primary disabled" disabled>Continuă</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-step="4" id="step-4">
+      <div class="card">
+        <h2>Selectează locul întâlnirii</h2>
+        <div class="options grid" id="placeOptions">
+          <button class="option">Parcul Alunelu</button>
+          <button class="option">Întâlnește-mă la lucru</button>
+          <button class="option">La sală</button>
+          <button class="option">Acuș îți scriu</button>
+        </div>
+        <div class="actions">
+          <button id="finalizeBtn" class="btn primary disabled" disabled>Finalizează</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-step="5" id="step-5">
+      <div class="card center">
+        <h2>Perfect <span class="heart">❤️</span> abia aștept</h2>
+        <div id="summary" class="summary"></div>
+        <div class="actions">
+          <button id="sendBtn" class="btn primary">Trimite și notificare</button>
+        </div>
+        <p class="note">Notificarea SMS se trimite automat (server cu Twilio).</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
